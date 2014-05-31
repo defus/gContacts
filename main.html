@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Copyright 2012 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Author: Landry DEFO KUATE (defolandry@yahoo.fr)
+-->
+<html data-ng-app="gContactApp" ng-csp="" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Manager App</title>
+<link rel="stylesheet" media="all" href="css/bootstrap.css">
+<link rel="stylesheet" media="all" href="css/main.css">
+<base target="_blank">
+</head>
+<body data-ng-controller="ContactsController">
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      
+      <div id="dropper">
+        <div class="dropzone"><img src="img/upload.svg"></div>
+      </div>
+
+      <section id="main">
+        <nav>
+          <h2>Contact Manager App</h2>
+          <button class="btn" data-ng-click="clearContacts()">Vider</button>
+          <button class="btn" id="close-button" title="Fermer">x</button>
+        </nav>
+
+        <progress></progress>
+
+        <table class="table table-condensed table-hover">
+          <thead>
+            <th>Photo</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date Modification</th>
+            <th></th>
+          </thead>
+          <tbody>
+          <tr data-ng-repeat="contact in contacts">
+            <td><a href="{{contact.alternateLink}}"><img data-ng-src="{{contact.icon}}" /></a></td>
+            <td><a href="{{contact.alternateLink}}">{{contact.firstname}}</a></td>
+            <td><a href="{{contact.alternateLink}}">{{contact.lastname}}</a></td>
+            <td><a href="{{contact.alternateLink}}"><span class="date">{{contact.updatedDate}}</span></a></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/dnd.js"></script>
+<script src="js/angular-1.1.0.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
