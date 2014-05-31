@@ -1,8 +1,13 @@
 
 # Demo for building a Contact app Chrome Extension with AngularJs
 
-To upload files: drag in files from the USB onto the app.
+To upload files: drag in files from your disk onto the app windows.
 
 ## APIs
 
-* [Identity](http://developer.chrome.com/apps/identity.html)
+* [chrome.fileSystem](http://developer.chrome.com/apps/fileSystem.html)
+     
+## Screenshot
+
+![screenshot](https://raw.githubusercontent.com/defus/gcontacts/master/assets/screenshot_640_400.png)
+![screenshot](https://raw.githubusercontent.com/defus/gcontacts/master/assets/screenshot_640_400.png)
